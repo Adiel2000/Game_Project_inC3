@@ -1,0 +1,79 @@
+{
+	"name": "cod Quest1.2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 701414315677868
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "points",
+					"sid": 292390200346082,
+					"parameters": {
+						"text": "Points"
+					}
+				}
+			],
+			"sid": 251918776438129
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 687705131410981,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Restart"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 333362552913293,
+					"parameters": {
+						"layout": "Quest1"
+					}
+				}
+			],
+			"sid": 502296910206567
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 304437763802735,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "NextLevel"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 384395980395585,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 834622933337457
+		}
+	],
+	"sid": 415976562350786
+}

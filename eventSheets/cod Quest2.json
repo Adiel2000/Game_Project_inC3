@@ -1,0 +1,399 @@
+{
+	"name": "cod Quest2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 105355870892573
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 800699315537848
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "BaclGround",
+					"sid": 674334671758921,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "Ground",
+					"sid": 895543032837273,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "180"
+					}
+				}
+			],
+			"sid": 396195345152965
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "BaclGround",
+					"sid": 843413625232107,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "-288"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "BaclGround",
+					"sid": 968460630982393,
+					"parameters": {
+						"x": "0"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Ground",
+					"sid": 786000962032245,
+					"parameters": {
+						"x": "0"
+					}
+				}
+			],
+			"sid": 345741621577109
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 507616952237431,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-vector-y",
+					"objectClass": "Bird",
+					"sid": 272516624477065,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-600"
+					}
+				}
+			],
+			"sid": 814474854783782
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 142471915601903
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Truba1",
+					"sid": 787899303514780,
+					"parameters": {
+						"x": "Truba1.X-3"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Truba2",
+					"sid": 704049128992542,
+					"parameters": {
+						"x": "Truba2.X-3"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 826038618959167,
+					"parameters": {
+						"text": "Score"
+					}
+				}
+			],
+			"sid": 535294430777778
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 808884358008444,
+					"parameters": {
+						"interval-seconds": "1.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 265375711538305,
+					"parameters": {
+						"object-to-create": "Truba2",
+						"layer": "0",
+						"x": "400",
+						"y": "random(87,256)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 988069073172241,
+					"parameters": {
+						"object-to-create": "Truba1",
+						"layer": "0",
+						"x": "400",
+						"y": "Truba2.Y+100",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 788302269092322
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bird",
+					"sid": 717345171540936,
+					"parameters": {
+						"object": "Ground"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 265628717049696,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 523282973872747,
+					"parameters": {
+						"layout": "Quest2_menu"
+					}
+				}
+			],
+			"sid": 289954791642924
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Bird",
+					"sid": 865185727936439,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 632761568609332,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 306562773602149,
+					"parameters": {
+						"layout": "Quest2_menu"
+					}
+				}
+			],
+			"sid": 857708711467715
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 551171323361023,
+					"parameters": {
+						"interval-seconds": "1.6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 386125586576205,
+					"parameters": {
+						"variable": "Score",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 647433957469162
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 668800825912587,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Button"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 338403748379354,
+					"parameters": {
+						"layout": "Quest2"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 716106912100397,
+					"parameters": {
+						"variable": "Score",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 657267741503838
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bird",
+					"sid": 656416316194288,
+					"parameters": {
+						"object": "Truba1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 194872227960676,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 642186196416334,
+					"parameters": {
+						"layout": "Quest2_menu"
+					}
+				}
+			],
+			"sid": 397435205632462
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bird",
+					"sid": 937162234171687,
+					"parameters": {
+						"object": "Truba2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 386875225370445,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 301655384317045,
+					"parameters": {
+						"layout": "Quest2_menu"
+					}
+				}
+			],
+			"sid": 683341021653134
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 965952570323623,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "NextLevel"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 725460416083730,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 517073413318495
+		}
+	],
+	"sid": 208313616821825
+}

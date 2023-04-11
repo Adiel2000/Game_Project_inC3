@@ -1,0 +1,63 @@
+{
+	"name": "Shell",
+	"plugin-id": "Sprite",
+	"sid": 503412494222913,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 291090247528775
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 35,
+						"height": 35,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6060412,
+						"collisionPoly": {
+							"points": [
+								0.14285714285714285,
+								0.14285714285714285,
+								0.5,
+								0,
+								0.8285714285714286,
+								0.14285714285714285,
+								0.9714285714285714,
+								0.5,
+								0.8285714285714286,
+								0.8285714285714286,
+								0.5,
+								0.9714285714285714,
+								0.14285714285714285,
+								0.8285714285714286,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 450445947679448,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

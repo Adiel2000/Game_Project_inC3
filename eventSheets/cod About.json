@@ -1,0 +1,32 @@
+{
+	"name": "cod About",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 846752536550078,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Exit"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 169184900496273,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 225962403919197
+		}
+	],
+	"sid": 261522913488240
+}

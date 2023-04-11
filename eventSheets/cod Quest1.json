@@ -1,0 +1,203 @@
+{
+	"name": "cod Quest1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Points",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 403461295965401
+		},
+		{
+			"eventType": "variable",
+			"name": "timer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 850919574604120
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 540957242122846
+				}
+			],
+			"actions": [
+				{
+					"id": "set-canvas-size",
+					"objectClass": "System",
+					"sid": 567276992319751,
+					"parameters": {
+						"width": "800",
+						"height": "500"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "points",
+					"sid": 948093501357279,
+					"parameters": {
+						"text": "\"0\""
+					}
+				}
+			],
+			"sid": 594475323801374
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 776740319345022
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Cannon",
+					"sid": 470573103057627,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 634967869339933
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 718340658022388,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Cannon",
+					"sid": 892785359656252,
+					"parameters": {
+						"object": "Shell",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "apply-impulse-at-angle",
+					"objectClass": "Shell",
+					"sid": 347374915159573,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse": "distance(Self.X,Self.Y,Mouse.X,Mouse.Y)/30",
+						"angle": "Cannon.Angle",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 332288849945709
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "Sprite",
+					"sid": 523384892466613
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite",
+					"sid": 265953879412790
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 849723856852614,
+					"parameters": {
+						"variable": "Points",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "points",
+					"sid": 211783528273136,
+					"parameters": {
+						"text": "Points"
+					}
+				}
+			],
+			"sid": 236952223254127
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 898740681219941,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 948687807663399,
+					"parameters": {
+						"variable": "timer",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 192904364603469
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 105971550431429,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 841410556417080,
+					"parameters": {
+						"layout": "Quest1.end"
+					}
+				}
+			],
+			"sid": 473319285934522
+		}
+	],
+	"sid": 976104931835450
+}

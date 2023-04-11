@@ -1,0 +1,109 @@
+{
+	"name": "start-end",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 452566155243498
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 387938953718071,
+					"parameters": {
+						"layout": "Quest3_game"
+					}
+				}
+			],
+			"sid": 852960781156511
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 815983688803224
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "points3",
+					"sid": 545180350636999,
+					"parameters": {
+						"text": "Points3"
+					}
+				},
+				{
+					"id": "set-canvas-size",
+					"objectClass": "System",
+					"sid": 749973261779049,
+					"parameters": {
+						"width": "800",
+						"height": "500"
+					}
+				}
+			],
+			"sid": 494924707152841
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 384772444606465,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "NextLevel"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 699496903526564,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 778738547943871
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 393421144140462,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Restart"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 982213402539872,
+					"parameters": {
+						"layout": "Quest3_game"
+					}
+				}
+			],
+			"sid": 826229446762974
+		}
+	],
+	"sid": 198394606221718
+}

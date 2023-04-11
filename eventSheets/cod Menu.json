@@ -1,0 +1,106 @@
+{
+	"name": "cod Menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 421732614695380
+				}
+			],
+			"actions": [
+				{
+					"id": "set-canvas-size",
+					"objectClass": "System",
+					"sid": 378353576944153,
+					"parameters": {
+						"width": "400",
+						"height": "500"
+					}
+				}
+			],
+			"sid": 351155157224665
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 154050055149340,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Level"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 743678611643429,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 969798142737356
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 464233585773341,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "About"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 858701351863101,
+					"parameters": {
+						"layout": "About"
+					}
+				}
+			],
+			"sid": 487467901030141
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 202087171621019,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "LogIn"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 741167049251164,
+					"parameters": {
+						"layout": "LogIn"
+					}
+				}
+			],
+			"sid": 188446034920791
+		}
+	],
+	"sid": 873437528376584
+}

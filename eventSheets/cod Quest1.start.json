@@ -1,0 +1,53 @@
+{
+	"name": "cod Quest1.start",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 973202101823293
+				}
+			],
+			"actions": [
+				{
+					"id": "set-canvas-size",
+					"objectClass": "System",
+					"sid": 784649267464959,
+					"parameters": {
+						"width": "800",
+						"height": "500"
+					}
+				}
+			],
+			"sid": 549036897355313
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 417403534968531,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 915632977455172,
+					"parameters": {
+						"layout": "Quest1"
+					}
+				}
+			],
+			"sid": 774838938892829
+		}
+	],
+	"sid": 654601865442589
+}

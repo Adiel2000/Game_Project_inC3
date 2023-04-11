@@ -1,0 +1,264 @@
+{
+	"name": "cod Quest3_game",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Points3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 916865122110477
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 569787794082484
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "fire",
+					"sid": 117152460968640,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spaceShip",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-canvas-size",
+					"objectClass": "System",
+					"sid": 477256788886093,
+					"parameters": {
+						"width": "600",
+						"height": "800"
+					}
+				}
+			],
+			"sid": 263897515071521
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 985529209462247,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spaceShip",
+					"sid": 898936204602940,
+					"parameters": {
+						"object": "laser",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "laser",
+					"sid": 799787433663807,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "-90"
+					}
+				}
+			],
+			"sid": 832145275844690
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 123924804913560,
+					"parameters": {
+						"interval-seconds": "1.3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 700565599257153,
+					"parameters": {
+						"object-to-create": "asteroizi",
+						"layer": "0",
+						"x": "random(0,600)",
+						"y": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "asteroizi",
+					"sid": 635957950305257,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "90"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "asteroizi",
+					"sid": 790115175348767,
+					"parameters": {
+						"frame-number": "random(0,12)"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "asteroizi",
+					"sid": 796093875031521,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "random(200,500)"
+					}
+				}
+			],
+			"sid": 946720864215143
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "laser",
+					"sid": 632574386621885,
+					"parameters": {
+						"object": "asteroizi"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "asteroizi",
+					"sid": 901368082826499,
+					"parameters": {
+						"object": "animation",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "asteroizi",
+					"sid": 511493814778942
+				},
+				{
+					"id": "destroy",
+					"objectClass": "laser",
+					"sid": 884292267983450
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 634804562643815,
+					"parameters": {
+						"variable": "Points3",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 419954475096315
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "spaceShip",
+					"sid": 577380207465859,
+					"parameters": {
+						"object": "asteroizi"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spaceShip",
+					"sid": 804546883870426,
+					"parameters": {
+						"object": "animation",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spaceShip",
+					"sid": 633724944643481
+				},
+				{
+					"id": "destroy",
+					"objectClass": "fire",
+					"sid": 573622098788986
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 546310114531697,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 846787270757872,
+					"parameters": {
+						"layout": "end"
+					}
+				}
+			],
+			"sid": 165390430455345
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 578407871654075
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "points3",
+					"sid": 312738759253715,
+					"parameters": {
+						"text": "Points3"
+					}
+				}
+			],
+			"sid": 709305934941425
+		}
+	],
+	"sid": 603935746679353
+}

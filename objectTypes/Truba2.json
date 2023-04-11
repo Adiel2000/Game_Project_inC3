@@ -1,0 +1,59 @@
+{
+	"name": "Truba2",
+	"plugin-id": "Sprite",
+	"sid": 494420482182355,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 735704507200154
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 52,
+						"height": 320,
+						"originX": 0.5192307692307693,
+						"originY": 1.128125,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2952713,
+						"collisionPoly": {
+							"points": [
+								0.057692307692307696,
+								0.009375,
+								0.5192307692307693,
+								0.003125,
+								0.9615384615384616,
+								0.009375,
+								0.9615384615384616,
+								1,
+								0.5192307692307693,
+								1,
+								0.057692307692307696,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 869132704456305,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

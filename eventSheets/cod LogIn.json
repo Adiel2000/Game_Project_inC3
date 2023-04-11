@@ -1,0 +1,32 @@
+{
+	"name": "cod LogIn",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 296891643631785,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Back"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 402621095049467,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 896367329331512
+		}
+	],
+	"sid": 276898508883769
+}

@@ -1,0 +1,68 @@
+{
+	"name": "spaceShip",
+	"plugin-id": "Sprite",
+	"sid": 970537685137208,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 543733846184151
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 291067343879976
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 99,
+						"height": 75,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5727023,
+						"collisionPoly": {
+							"points": [
+								0.30303030303030304,
+								0.4,
+								0.5,
+								0,
+								0.6868686868686869,
+								0.4,
+								0.98989898989899,
+								0.5,
+								0.8484848484848485,
+								0.8,
+								0.5,
+								0.9866666666666667,
+								0.1414141414141414,
+								0.8,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 634263416539844,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
